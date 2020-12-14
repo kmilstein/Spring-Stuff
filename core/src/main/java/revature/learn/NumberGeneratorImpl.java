@@ -9,7 +9,7 @@ public class NumberGeneratorImpl implements NumberGenerator{
 
     private int maxNumber = 100;
 
-    // == public methids == //
+    // == public methods == //
     @Override
     public int next() {
         return random.nextInt(maxNumber);
