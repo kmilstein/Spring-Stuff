@@ -7,7 +7,7 @@
     <bean id="numberGenerator" class="revature.learn.NumberGeneratorImpl"/>
 
     <bean id="game" class="revature.learn.GameImpl" >
-        <constructor-arg ref = "numberGenerator"/>
+        <property name="numberGenerator" ref="numberGenerator"/>
     </bean>
 
 
