@@ -10,6 +10,7 @@ import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.*;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.env.ConfigurableEnvironment;
@@ -25,14 +26,13 @@ import java.util.Map;
 
 public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
-    private static final String CONFIG_LOCATION = "beans.xml";
 
     public static void main(String[] args) {
         log.info("Guess the number game");
 
         //create the context (container)
         ConfigurableApplicationContext context
-                = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
+                = new AnnotationConfigApplicationContext(AppConfig.class);
 
         //get number generator bean from context (container)
         NumberGenerator numberGenerator
