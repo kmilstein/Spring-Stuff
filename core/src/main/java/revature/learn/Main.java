@@ -44,23 +44,12 @@ public class Main {
         //log generated number
         log.info("number = {}", number);
 
-        //get game bean from context (container)
-        Game game = context.getBean(Game.class);
-
         //get message generator bean from context (container)
         MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
 
-        // call method getMainMessage() to get a message
-        String mainMessage = messageGenerator.getMainMessage();
-
-        // call method getResultMessage() to get a message
-        String resultMessage = messageGenerator.getResultMessage();
-
-        //log main message
-        log.info("main message = {}", mainMessage);
-
-        //log result message
-        log.info("result message = {}", resultMessage);
+        //log main and result message
+        log.info("main message = {}", messageGenerator.getMainMessage());
+        log.info("result message = {}", messageGenerator.getResultMessage());
 
         //close context (container)
         context.close();
