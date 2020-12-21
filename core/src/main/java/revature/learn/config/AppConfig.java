@@ -1,10 +1,13 @@
-package revature.learn;
+package revature.learn.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import revature.learn.*;
 
 @Configuration
+@Import(GameConfig.class)
 @ComponentScan(basePackages = "revature.learn")
 public class AppConfig {
 
