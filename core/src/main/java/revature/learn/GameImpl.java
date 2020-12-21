@@ -13,7 +13,7 @@ public class GameImpl implements Game {
     //== constants == //
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
-    //== constants == //
+    //== fields == //
     @Autowired
     private NumberGenerator numberGenerator;
     private int guessCount = 10;
