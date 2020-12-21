@@ -26,7 +26,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
     //== public methods ==//
     @Override
     public String getMainMessage() {
-        return "Number is between" +
+        return "Number is between " +
                 game.getSmallest() +
                 " and " +
                 game.getBiggest() +
@@ -35,7 +35,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
 
     @Override
     public String getResultMessage() {
-        if (game.isGameLost()) {
+        if (game.isGameWon()) {
             return "You guessed it! The number was " + game.getNumber();
         } else if (game.isGameLost()) {
             return "You lost. The number was " + game.getNumber();
@@ -50,7 +50,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
                 direction = "Higher";
             }
 
-            return direction + "! You have " + game.getRemainingGuesses() + "guesses left";
+            return direction + "! You have " + game.getRemainingGuesses() + " guesses left";
         }
     }
 }
