@@ -1,17 +1,22 @@
 package revature.learn.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import revature.learn.GuessCount;
 import revature.learn.MaxNumber;
 
 @Configuration
+@PropertySource("classpath:config/game.properties")
 public class GameConfig {
 
     //== fields ==//
-    private int maxNumber = 25;
+    @Value("${game.maxNumber:20}")
+    private int maxNumber;
 
-    private int guessCount = 8;
+    @Value("${game.guessCount:5}")
+    private int guessCount;
 
     //== bean methods ==//
     @Bean
