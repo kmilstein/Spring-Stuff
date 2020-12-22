@@ -16,9 +16,9 @@ public class ConsoleNumberGuess {
     private static final Logger log = LoggerFactory.getLogger(ConsoleNumberGuess.class);
 
     //== fields ==//
-    private Game game;
+    private final Game game;
 
-    private MessageGenerator messageGenerator;
+    private final MessageGenerator messageGenerator;
 
     //== constructors ==//
     @Autowired

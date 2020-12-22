@@ -7,8 +7,8 @@ import revature.learn.MaxNumber;
 import revature.learn.MinNumber;
 
 @Configuration
-@PropertySource("classpath:config/game.properties")
 @ComponentScan(basePackages = "revature.learn")
+@PropertySource("classpath:config/game.properties")
 public class GameConfig {
 
     //== fields ==//
