@@ -1,15 +1,14 @@
 package revature.learn.config;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import revature.learn.GuessCount;
 import revature.learn.MaxNumber;
 import revature.learn.MinNumber;
 
 @Configuration
 @PropertySource("classpath:config/game.properties")
+@ComponentScan(basePackages = "revature.learn")
 public class GameConfig {
 
     //== fields ==//
